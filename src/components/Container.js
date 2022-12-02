@@ -4,9 +4,10 @@ import Button from './Button';
 import { useContext } from "react"
 import ThemeContext from '../context/ThemeContext';
 import Profile from './Profile';
+import { useTheme} from "../context/ThemeContext"
 
 function Container() {
-    const {theme} = useContext(ThemeContext);
+    const {theme} = useTheme();
   return (
     <div className={`app ${theme === "dark" ? theme:""}`}>Container
         <Header />

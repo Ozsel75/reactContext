@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import {useContext } from "react";
+import { useUser } from '../context/UserContext';
 
 import UserContext from "../context/UserContext"
 
 function Profile() {
 
-    const {user, setUser} = useContext(UserContext);
+    const {user, setUser} = useUser();
 
     const [loading, setLoading] = useState(false);
 
